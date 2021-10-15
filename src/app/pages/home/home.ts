@@ -72,41 +72,41 @@ export class HomePage extends BasePage {
 
   listenForMessages() {
     this.messagingService.getMessages().subscribe(async (msg: any) => {
-      console.log('NEW MESSAGE:', msg);
-      
+      console.log('NEW MESSAGE: ', msg);
+
       const alert = await this.alertCtrl1.create({
         header: msg.notification.title,
         subHeader: msg.notification.body,
         message: msg.data.info,
         buttons: ['OK'],
       });
-
+ 
       await alert.present();
-    })
+    });
   }
 
   requestPermission() {
-      this.messagingService.requestPermission().subscribe(
-        async token => {
-          const toast = await this.toastCtrl1.create({
-            message: 'Got your token',
-            duration: 2000
-          });
-          toast.present();
-        },
-        async(err) => {
-          const alert = await this.alertCtrl1.create({
-            header: 'Error',
-            message: err,
-            buttons: ['OK'],        
-          });
-
-          await alert.present();
-        }
-      )
+    this.messagingService.requestPermission().subscribe(
+      async token => {
+        const toast = await this.toastCtrl1.create({
+          message: 'Got your token',
+          duration: 2000
+        });
+        toast.present();
+      },
+      async (err) => {
+        const alert = await this.alertCtrl1.create({
+          header: 'Error',
+          message: err,
+          buttons: ['OK'],
+        });
+ 
+        await alert.present();
+      }
+    );
   }
 
-  async deleteToken(){
+  async deleteToken() {
     this.messagingService.deleteToken();
     const toast = await this.toastCtrl1.create({
       message: 'Token removed',

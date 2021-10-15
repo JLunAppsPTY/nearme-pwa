@@ -20,5 +20,13 @@
     "fullTemplateTypeCheck": true,
     "strictTemplates": false,
     "strictInjectionParameters": true
+  },
+  "paths": {
+    "rxjs": [
+      "node_modules/rxjs"
+    ],
+    "rxjs/*": [
+      "node_modules/rxjs/*"
+    ]
   }
 }

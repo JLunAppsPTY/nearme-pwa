@@ -60,6 +60,7 @@ SwiperCore.use([IonicSwiper, Pagination, Navigation]);
       animated: !isPlatform('mobileweb') && !isPlatform('desktop'),
       rippleEffect: !isPlatform('mobileweb') && !isPlatform('desktop'),
     }),
+    ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production, registrationStrategy: 'registerWhenStable:30000'}),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireMessagingModule,
     AppRoutingModule,
@@ -73,8 +74,7 @@ SwiperCore.use([IonicSwiper, Pagination, Navigation]);
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    }),
-    ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production, registrationStrategy: 'registerWhenStable:30000'})
+    })
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
