@@ -11,12 +11,7 @@ export class MessagingService {
   constructor(private afMessaging: AngularFireMessaging) {}
  
   requestPermission() {
-    return this.afMessaging.requestToken.pipe(
-      tap(atoken => {
-        console.log('Store token to server: ', atoken);
-        this.token = atoken;
-      })
-    );
+    return this.afMessaging.requestToken.pipe(tap<any>(token => {console.log('Store token to server: ', token);}));
   }
  
   getMessages() {
