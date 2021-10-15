@@ -1,0 +1,8 @@
+{
+  "name": "Nearme 5",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Nearme</title>
+
+    <base href="/"/>
+
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="Ionic v6 Starter / Template for location based apps"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nearme - Ionic v6 Starter / Template for location based apps" />
+    <meta property="og:site_name" content="Nearme">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Ionic Starter / Template for location based apps" />
+    <meta property="og:image" content="https://trynearme.app/assets/img/nearme.png" />
+    <meta property="og:url" content="https://trynearme.app" />
+
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:title" content="Nearme">
+    <meta name="twitter:description" content="Ionic v6 Starter / Template for location based apps">
+
+    <meta name="google-signin-client_id" content="xxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com">
+
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png"/>
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#D4145A">
+</head>
+  <body>
+    <app-root></app-root>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
+    <!-- Web Social Share -->
+    <script type="module" src="./websocialshare/websocialshare.esm.js"></script>
+    <script nomodule src="./websocialshare/websocialshare.js"></script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: 'REPLACE_ME',
+          cookie: true, // enable cookies to allow the server to access the session
+          xfbml: true, // parse social plugins on this page
+          version: 'v2.8' // use graph api version 2.8
+        });
+      };
+    
+      // Load the SDK asynchronously
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+</html>

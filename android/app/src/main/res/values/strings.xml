@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_name">Nearme</string>
+  <string name="title_activity_main">Nearme</string>
+  <string name="package_name">com.quanlabs.nearme5</string>
+  <string name="custom_url_scheme">com.quanlabs.nearme5</string>
+  <string name="facebook_app_id">YOUR_FB_ID</string>
+  <string name="facebook_client_token">YOUR_FB_CLIENT_TOKEN</string>
+  <string name="server_client_id">xxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com</string>
+</resources>

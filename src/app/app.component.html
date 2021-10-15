@@ -1,0 +1,9 @@
+<ion-app>
+  <div *ngIf="isLoadingViewVisible" class="flex full-height ion-align-items-center ion-justify-content-center">
+    <ion-spinner name="crescent" color="secondary"></ion-spinner>
+  </div>
+  
+  <empty-view *ngIf="isErrorViewVisible" icon="alert-circle-outline" [text]="'ERROR_NETWORK' | translate">
+  </empty-view>
+  <ion-router-outlet *ngIf="isContentViewVisible"></ion-router-outlet>
+</ion-app>
