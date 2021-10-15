@@ -12,8 +12,9 @@ export class MessagingService {
  
   requestPermission() {
     return this.afMessaging.requestToken.pipe(
-      tap(token => {
-        console.log('Store token to server: ', token);
+      tap(atoken => {
+        console.log('Store token to server: ', atoken);
+        this.token = atoken;
       })
     );
   }
@@ -28,4 +29,5 @@ export class MessagingService {
       this.token = null;
     }
   }
+
 }

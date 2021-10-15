@@ -74,14 +74,14 @@ export class HomePage extends BasePage {
     this.messagingService.getMessages().subscribe(async (msg: any) => {
       console.log('NEW MESSAGE: ', msg);
 
-      const alert = await this.alertCtrl1.create({
+      const alert1 = await this.alertCtrl1.create({
         header: msg.notification.title,
         subHeader: msg.notification.body,
         message: msg.data.info,
         buttons: ['OK'],
       });
  
-      await alert.present();
+      await alert1.present();
     });
   }
 
