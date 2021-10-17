@@ -12,7 +12,7 @@
 <ion-content>
 
   <ion-list no-lines>
-
+<!-- 
     <ion-item lines="none" class="ion-margin-vertical" color="white">
       <ion-button expand="full" color="secondary"  (click)="requestPermission()">Request Permission</ion-button>
     </ion-item>
@@ -20,7 +20,7 @@
     <ion-item lines="none" class="ion-margin-vertical" color="white">
       <ion-button expand="full" color="secondary" (click)="deleteToken()">Delete Permission</ion-button>
     </ion-item> 
-
+ -->
     <ion-item lines="none" class="ion-margin-vertical" color="white">
       <ion-label class="text-medium bold">{{ 'PUSH_NOTIFICATIONS' | translate }}</ion-label>
       <ion-toggle color="secondary" (ionChange)="requestPushNotificationsPermission()" [(ngModel)]="preference.isPushEnabled">

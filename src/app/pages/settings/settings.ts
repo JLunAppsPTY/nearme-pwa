@@ -38,7 +38,7 @@ export class SettingsPage extends BasePage {
     super(injector);
   }
 
-  listenForMessages() {
+/*   listenForMessages() {
     this.messagingService.getMessages().subscribe(async (msg: any) => {
       console.log('NEW MESSAGE:', msg);
       
@@ -51,9 +51,9 @@ export class SettingsPage extends BasePage {
 
       await alert.present();
     })
-  }
+  } */
 
-  requestPermission() {
+/*   requestPermission() {
       this.messagingService.requestPermission().subscribe(
         async token => {
           const toast = await this.toastCtrl1.create({
@@ -72,16 +72,16 @@ export class SettingsPage extends BasePage {
           await alert.present();
         }
       )
-  }
+  } */
 
-  async deleteToken(){
+/*   async deleteToken(){
     this.messagingService.deleteToken();
     const toast = await this.toastCtrl1.create({
       message: 'Token removed',
       duration: 2000
     });
     toast.present();
-  }
+  } */
 
   requestPushNotificationsPermission() { // requesting permission
     this.afMessaging.requestToken // getting tokens

@@ -85,7 +85,7 @@ export class HomePage extends BasePage {
     });
   }
 
-  requestPermission() {
+/*   requestPermission() {
     this.messagingService.requestPermission().subscribe(
       async token => {
         const toast = await this.toastCtrl1.create({
@@ -104,7 +104,7 @@ export class HomePage extends BasePage {
         await alert.present();
       }
     );
-  }
+  } */
 
   async deleteToken() {
     this.messagingService.deleteToken();
