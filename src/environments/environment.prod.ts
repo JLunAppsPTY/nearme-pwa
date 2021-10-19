@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  serverUrl: 'https://easygopanama.com',
-  appUrl: 'https://easygopanama.com',
+  serverUrl: 'https://easygopanama.com/api',
+  appUrl: 'https://app.jlunappspty.xyz',
   appImageUrl: 'https://trynearme.app/assets/img/nearme.png',
   appId: 'Zf4RIzA3SZ',
   fbId: '',
